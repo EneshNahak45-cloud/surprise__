@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top, #ffb6c1, transparent 40%),
+        linear-gradient(135deg, #ff758c, #ff7eb3);
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+.screen,
+.level {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+
+.card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+
+    animation: cardAppear 0.8s ease;
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.level-number {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.85;
+
+}
+
+
+h1 {
+
+    font-size: clamp(35px, 7vw, 70px);
+
+    margin-bottom: 20px;
+
+}
+
+
+h2 {
+
+    margin: 20px 0;
+
+}
+
+
+p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin: 10px 0;
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.heart {
+
+    font-size: 80px;
+
+    animation: heartbeat 1.2s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 8px 0;
+
+    border: none;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 16px;
+
+}
+
+
+button {
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #e84363;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+
+#loginError {
+
+    color: #ffe5e5;
+
+    font-size: 14px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.button-group {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================
+   EMOJIS
+========================= */
+
+.emoji-row {
+
+    font-size: 45px;
+
+    margin: 30px 0;
+
+}
+
+
+/* =========================
+   MINI GALLERY
+========================= */
+
+.mini-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+
+.mini-gallery img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.mini-gallery img:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin: 30px 0;
+
+}
+
+
+.photo {
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    aspect-ratio: 1 / 1;
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+
+.photo img:hover {
+
+    transform: scale(1.12);
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-box {
+
+    margin: 30px auto;
+
+    max-width: 650px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+}
+
+
+.message-box p {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+audio {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 25px auto;
+
+}
+
+
+.music-note {
+
+    font-size: 50px;
+
+    margin: 20px;
+
+}
+
+
+/* =========================
+   LEVEL 8
+========================= */
+
+.big-text {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin: 30px 0;
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+    margin: 30px;
+
+}
+
+
+/* =========================
+   FINAL LEVEL
+========================= */
+
+.final-level {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.15),
+            transparent 50%
+        );
+
+}
+
+
+.final-heart {
+
+    font-size: 100px;
+
+    animation: heartbeat 1s infinite;
+
+}
+
+
+.final-message {
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+}
+
+
+.final-photo {
+
+    width: 250px;
+
+    height: 250px;
+
+    margin: 30px auto;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 6px solid white;
+
+}
+
+
+.final-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.love-message {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart-float {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart 5s linear forwards;
+
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .card {
+
+        padding: 25px 18px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .mini-gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mini-gallery img {
+
+        height: 220px;
+
+    }
+
+
+    h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    p {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}

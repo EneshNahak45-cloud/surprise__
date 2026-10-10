@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Special Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN SCREEN
+    ========================== -->
+
+    <section id="loginScreen" class="screen active">
+
+        <div class="login-box">
+
+            <div class="heart">❤️</div>
+
+            <h1>One Little Surprise</h1>
+
+            <p>Enter the details to open your surprise.</p>
+
+            <input
+                type="text"
+                id="userId"
+                placeholder="Enter User ID"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="checkLogin()">
+                Open Surprise 💝
+            </button>
+
+            <p id="loginError"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <main id="mainWebsite" class="hidden">
+
+
+        <!-- LEVEL 1 -->
+
+        <section class="level" id="level1">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 1
+                </div>
+
+                <h1>Hello! 👋</h1>
+
+                <p>
+                    A something special for you.
+                </p>
+
+                <p>
+                    But you have to go through all the levels
+                    to discover it.
+                </p>
+
+                <button onclick="nextLevel(2)">
+                    Start the Surprise ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 2 -->
+
+        <section class="level hidden" id="level2">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 2
+                </div>
+
+                <h1>A Small Question 💭</h1>
+
+                <p>
+                    Are you ready for the next level?
+                </p>
+
+                <div class="button-group">
+
+                    <button onclick="nextLevel(3)">
+                        YES ❤️
+                    </button>
+
+                    <button onclick="nextLevel(3)">
+                        OF COURSE 😄
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 3 -->
+
+        <section class="level hidden" id="level3">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 3
+                </div>
+
+                <h1>Something Is Coming... 👀</h1>
+
+                <p>
+                    Every special moment deserves
+                    to be remembered.
+                </p>
+
+                <div class="emoji-row">
+                    📸 ❤️ ✨ 🎁
+                </div>
+
+                <button onclick="nextLevel(4)">
+                    Continue →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 4 -->
+
+        <section class="level hidden" id="level4">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 4
+                </div>
+
+                <h1>Our Memories 💕</h1>
+
+                <p>
+                    Here are some memories worth keeping.
+                </p>
+
+                <div class="mini-gallery">
+
+                    <img src="images (2).jpg" alt="Memory 1">
+
+                    <img src="photo1.jpg" alt="Memory 2">
+
+                    <img src="images (3).jpg" alt="Memory 3">
+
+                </div>
+
+                <button onclick="nextLevel(5)">
+                    More Memories 📸
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 5 -->
+
+        <section class="level hidden" id="level5">
+
+            <div class="card gallery-card">
+
+                <div class="level-number">
+                    LEVEL 5
+                </div>
+
+                <h1>Photo Gallery 📸</h1>
+
+                <p>
+                    A collection of some beautiful moments.
+                </p>
+
+                <div class="gallery">
+
+                    <div class="photo">
+                        <img src=" images (4).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (5).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (6).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (7).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (8).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (9).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (9).jpg">
+                    </div>
+
+                    <div class="photo">
+                        <img src="images (9).jpg">
+                    </div>
+
+                </div>
+
+                <button onclick="nextLevel(6)">
+                    Continue ❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 6 -->
+
+        <section class="level hidden" id="level6">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 6
+                </div>
+
+                <h1>For You 💌</h1>
+
+                <div class="message-box">
+
+                    <p>
+                        Some people enter our lives and
+                        make ordinary moments special.
+                    </p>
+
+                    <p>
+                        Thank you for being one of those
+                        special people.
+                    </p>
+
+                    <p>
+                        I hope this little surprise
+                        makes you smile. ❤️
+                    </p>
+
+                </div>
+
+                <button onclick="nextLevel(7)">
+                    One More Thing 🎁
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 7 -->
+
+        <section class="level hidden" id="level7">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 7
+                </div>
+
+                <h1>Music 🎵</h1>
+
+                <p>
+                    Press play and enjoy the moment.
+                </p>
+
+                <audio id="musicPlayer" controls>
+
+                    <source
+                        src="Happy-Birthday-To-You-Ji-Cake-Shake-Hindi-Ringtone.mp3"
+                        type="audio/mpeg"
+                    >
+
+                    Your browser does not support audio.
+
+                </audio>
+
+                <div class="music-note">
+                    🎵 ❤️ 🎵
+                </div>
+
+                <button onclick="nextLevel(8)">
+                    Continue ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 8 -->
+
+        <section class="level hidden" id="level8">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 8
+                </div>
+
+                <h1>Almost There... 👀</h1>
+
+                <p>
+                    You have successfully completed
+                    almost every level.
+                </p>
+
+                <p class="big-text">
+                    But there is still one secret...
+                </p>
+
+                <button onclick="nextLevel(9)">
+                    Reveal The Secret 🔐
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 9 -->
+
+        <section class="level hidden" id="level9">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 9
+                </div>
+
+                <h1>One Last Step ❤️</h1>
+
+                <p>
+                    Take a deep breath...
+                </p>
+
+                <p>
+                    And get ready for the final surprise.
+                </p>
+
+                <div class="countdown" id="countdown">
+                    3
+                </div>
+
+                <button onclick="startFinalCountdown()">
+                    I'm Ready 💝
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEVEL 10 -->
+
+        <section class="level hidden final-level" id="level10">
+
+            <div class="card">
+
+                <div class="level-number">
+                    LEVEL 10
+                </div>
+
+                <div class="final-heart">
+                    ❤️
+                </div>
+
+                <h1>Happy Birthday! 🎂</h1>
+
+                <h2>
+                    This Surprise Is Just For You
+                </h2>
+
+                <p class="final-message">
+
+                    Wishing you a beautiful day filled
+                    with happiness, laughter and wonderful
+                    memories.
+
+                </p>
+
+                <div class="final-photo">
+
+                    <img
+                        src="images (2).jpg"
+                        alt="Special Photo"
+                    >
+
+                </div>
+
+                <p class="love-message">
+                    Made with ❤️ just for you
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FLOATING HEARTS -->
+
+    <div id="hearts"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
