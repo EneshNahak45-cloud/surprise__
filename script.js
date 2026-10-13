@@ -7,9 +7,9 @@
    AND PASSWORD.
 */
 
-const correctUserId = "1";
+const correctUserId = "arpita";
 
-const correctPassword = "1";
+const correctPassword = "12345";
 
 
 /* =========================
